@@ -27,6 +27,11 @@ public class MedicoController {
 	
 	@Autowired
 	PacienteService pacienteService;
+	
+	@GetMapping ("/saludo")
+	public String saludo () {
+		return "Hola soy un Médico";
+	}
 
 	@GetMapping("/medicos")
 	public ResponseEntity<Collection<MedicoResponse>> getMedico() {
